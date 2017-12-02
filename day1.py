@@ -38,13 +38,18 @@ def part_two(digits):
 def main():
     """Main entry point."""
     import argparse
+    import fileinput
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('infile', type=argparse.FileType('r'))
+    parser.add_argument('infile', help='input file to read ("-" for stdin)')
     args = parser.parse_args()
-    puzzle_input = args.infile.read().strip()
-    print('Part one: {}'.format(part_one(puzzle_input)))
-    print('Part two: {}'.format(part_two(puzzle_input)))
+    try:
+        for line in fileinput.input(args.infile):
+            puzzle_input = line.strip()
+            print('Part one: {}'.format(part_one(puzzle_input)))
+            print('Part two: {}'.format(part_two(puzzle_input)))
+    except KeyboardInterrupt:
+        pass
 
 
 if __name__ == '__main__':
