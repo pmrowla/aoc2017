@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Advent of Code 2017 day 1 module."""
+"""Advent of Code 2017 day 2 module."""
 from __future__ import division, print_function
 
 
