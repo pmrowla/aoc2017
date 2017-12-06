@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Advent of Code 2017 day 4 module."""
+"""Advent of Code 2017 day 6 module."""
 from __future__ import print_function
 
 
