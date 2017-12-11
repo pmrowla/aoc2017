@@ -20,25 +20,10 @@ merge = {
         'nw': [],
         'n': 'ne',
     },
-    's': {
-        'nw': ['sw'],
-        'n': [],
-        'ne': ['se'],
-    },
-    'sw': {
-        'n': ['nw'],
-        'ne': [],
-        'se': ['s'],
-    },
-    'nw': {
-        'ne': ['n'],
-        'se': [],
-        's': ['sw'],
-    },
 }
 
 
-def compress(steps):
+def compress_one(steps):
     if len(steps) <= 1:
         return False
     for d1 in merge:
@@ -58,7 +43,7 @@ def process(steps):
     compressed = []
     for i in steps:
         compressed.append(i)
-        while compress(compressed):
+        while compress_one(compressed):
             pass
         max_distance = max(max_distance, len(compressed))
     return len(compressed), max_distance
