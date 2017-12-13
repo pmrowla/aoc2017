@@ -9,9 +9,7 @@ def sum_severity(layers, delay=0):
 
 
 def is_caught(layer, depth, delay=0):
-    if (layer + delay) % (2 * (depth - 1)) == 0:
-        return True
-    return False
+    return (layer + delay) % (2 * (depth - 1)) == 0
 
 
 def part_two(layers, delay):
