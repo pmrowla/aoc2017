@@ -48,7 +48,6 @@ def process(puzzle_input):
         if l in permutations:
             break
         permutations.append(l)
-    print(len(permutations))
     p2 = 1000000000 % len(permutations)
     return ''.join(permutations[1]), ''.join(permutations[p2])
 
