@@ -28,7 +28,6 @@ class Route(object):
         return self.grid[0].index('|'), 0
 
     def _turn(self):
-        to_check = self.MOVES.copy()
         if self.direction in 'ud':
             to_check = 'lr'
         else:
@@ -79,10 +78,10 @@ def main():
     parser.add_argument('infile', help='input file to read ("-" for stdin)')
     args = parser.parse_args()
     try:
-        insts = []
+        puzzle_input = []
         for line in fileinput.input(args.infile):
-            insts.append(line)
-        p1, p2 = process(insts)
+            puzzle_input.append(line)
+        p1, p2 = process(puzzle_input)
         print('Part one: {}'.format(p1))
         print('Part two: {}'.format(p2))
     except KeyboardInterrupt:
