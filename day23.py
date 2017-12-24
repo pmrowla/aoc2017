@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Advent of Code 2017 day 18 module."""
+"""Advent of Code 2017 day 23 module."""
 from __future__ import print_function
 
 from collections import defaultdict
